@@ -1,23 +1,6 @@
 name: Validate/build docs
 
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - 'DC-*'
-      - 'adoc/**'
-      - 'articles/**'
-      - 'common/**'
-      - 'concepts/**'
-      - 'glues/**'
-      - 'images/**'
-      - 'references/**'
-      - 'snippets/**'
-      - 'tasks/**'
-      - 'topics/**'
-      - 'xml/**'
-      # path-ignore:
-      - '!templates/**'
+on: workflow_dispatch
 
 jobs:
   select-dc-files:

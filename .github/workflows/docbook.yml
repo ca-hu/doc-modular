@@ -47,6 +47,7 @@ jobs:
           dc-files: ${{ matrix.dc-files }}
       - name: Upload SLES-SELinux.xml artifact
         uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: sles-selinux-xml
           path: /github/workspace/build/DC-SLES-SELinux/.profiled/16.0_sles/SLES-SELinux.xml

@@ -45,7 +45,11 @@ jobs:
         uses: openSUSE/doc-ci@gha-validate
         with:
           dc-files: ${{ matrix.dc-files }}
-
+      - name: Upload SLES-SELinux.xml artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sles-selinux-xml
+          path: /github/workspace/build/DC-SLES-SELinux/.profiled/16.0_sles/SLES-SELinux.xml
 
   build-html:
     runs-on: ubuntu-latest
